@@ -45,6 +45,8 @@ def main():
         print(f"Error: '{input_filename}' is a directory, not a file.")
     except UnicodeDecodeError:
         print(f"Error: Could not decode the file '{input_filename}'. It may not be a text file.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
     
 if __name__ == "__main__":
     main()
